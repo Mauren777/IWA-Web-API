@@ -1,0 +1,26 @@
+{
+  "name": "iwa-web-api",
+  "version": "1.0.0",
+  "description": "IWA CA2 Web API Maura Tangara",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mauren777/IWA-Web-API.git"
+  },
+  "keywords": [
+    "Web",
+    "API"
+  ],
+  "author": "Maura Tangara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mauren777/IWA-Web-API/issues"
+  },
+  "homepage": "https://github.com/Mauren777/IWA-Web-API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
