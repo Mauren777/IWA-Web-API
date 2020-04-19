@@ -2,9 +2,9 @@
   "name": "iwa-web-api",
   "version": "1.0.0",
   "description": "IWA CA2 Web API Maura Tangara",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Mauren777/IWA-Web-API#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   }
 }
