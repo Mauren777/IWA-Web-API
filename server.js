@@ -2,6 +2,7 @@ var http = require('http'), //This module provides the HTTP server functionaliti
     path = require('path'), //The path module provides utilities for working with file and directory paths
     express = require('express'), //This module allows this app to respond to HTTP Requests, defines the routing and renders back the required content
     morgan = require('morgan'); // Log requests middleware
+    connect = require('./connection'); // 
 
 var app = express(); //The set our routing to be handled by Express
 var server = http.createServer(app); //This is where our server gets created

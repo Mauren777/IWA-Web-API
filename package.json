@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Mauren777/IWA-Web-API#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.9.9",
     "morgan": "^1.10.0"
   }
 }
