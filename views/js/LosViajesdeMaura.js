@@ -32,4 +32,18 @@ function productList() {
 
 $(document).ready(function() {
     productList();
+
+    $('body').on('click', '.add-to-cart', function() {
+        productTitle = $(this).data('product-title');
+        productPrice = parseFloat($(this).data('product-price'));
+        total = parseFloat($('#total').text());
+
+        // Update Total
+        total = parseFloat(productPrice + total).toFixed(2);
+        $('#total').text( total );
+
+        // Add Product to list
+        $('#product-list').append('<div class="col-md-12"><h6>'+ productTitle +'</h6><hr/></div>');
+    });
+    
 });
