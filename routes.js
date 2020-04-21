@@ -4,11 +4,11 @@ var express = require('express'),
 
 // Default get request
 router.get('/', function(req, res){
-    return res.send('Hello World');
+    res.render('index');
 });
 
+// Products API
 router.post('/v1/products', productsCtrl.createProduct);
-
 router.get('/v1/products', productsCtrl.getProducts);
 
 module.exports = router;

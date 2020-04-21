@@ -7,6 +7,7 @@ var http = require('http'), //This module provides the HTTP server functionaliti
 var app = express(); //The set our routing to be handled by Express
 var server = http.createServer(app); //This is where our server gets created
 
+app.use(express.static(path.resolve(__dirname, 'views'))); //We define the views folder as the one where all static content will be served
 app.use(express.urlencoded({extended: true})); //We allow the data sent from the client to be coming in as part of the URL in GET and POST requests
 app.use(express.json()); //We include support for JSON that is coming from the client
 app.use(morgan('tiny')); // HTTP logging middleware
