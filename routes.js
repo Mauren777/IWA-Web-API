@@ -8,7 +8,10 @@ router.get('/', function(req, res){
 });
 
 // Products API
-router.post('/v1/products', productsCtrl.createProduct);
 router.get('/v1/products', productsCtrl.getProducts);
+router.get('v1/products/:id', productsCtrl.getProduct);
+router.post('/v1/products', productsCtrl.createProduct);
+router.post('/v1/products/:id', productsCtrl.updateProduct);
+router.delete('v1/products/:id', productsCtrl.deleteProduct);
 
 module.exports = router;
