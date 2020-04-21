@@ -1,6 +1,6 @@
 var express = require('express'),
     router = express.Router(),
-    productsCtrl = require('./contollers/products-controller'); // Load Controller
+    productsCtrl = require('./controllers/products-controller'); // Load Controller
 
 // Default frontend URLs
 router.get('/', function(req, res){
