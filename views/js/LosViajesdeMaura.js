@@ -113,7 +113,7 @@ $(document).ready(function() {
             type: 'POST',
             data: { 
                 title: $("input[name='title']").val(),  
-                description: $("#description").text(), 
+                description: $("#description").val(), 
                 price: $("input[name='price']").val()
             },
             dataType: 'json',
