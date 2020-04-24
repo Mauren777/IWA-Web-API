@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://test:1iBqUtpUTTN8E7Cz@cluster0-rtat4.mongodb.net/shop?retryWrites=true&w=majority', { useNewUrlParser: true,  useUnifiedTopology: true });
+// Connect to MongoDB Atlas. User and Password are Heroku config Values
+mongoose.connect('mongodb+srv://process.env.MONGODB_USERNAME:process.env.MONGODB_PASSWORD@cluster0-rtat4.mongodb.net/shop?retryWrites=true&w=majority', { useNewUrlParser: true,  useUnifiedTopology: true });
 
 mongoose.connection.on('error', (err) => { 
     console.log('Mongodb Error: ', err); 
