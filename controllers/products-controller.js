@@ -1,5 +1,6 @@
 var Product = require('../models/products');
 
+// Create Product
 exports.createProduct = function(req, res) { 
     var newproduct = new Product(req.body);
     newproduct.save(function (err, product) { 
@@ -10,6 +11,7 @@ exports.createProduct = function(req, res) {
     });
 };
 
+// Get All Products
 exports.getProducts = function(req,res){
   Product.find({}, function (err, products) {
     if (err) {
@@ -19,6 +21,7 @@ exports.getProducts = function(req,res){
   }); 
 };
 
+// Get One Product
 exports.getProduct = function(req, res) {
   Product.findOne({_id: req.params.id}, function (err, product) {
     if (err) {
@@ -28,6 +31,7 @@ exports.getProduct = function(req, res) {
   }); 
 };
 
+// Update Product
 exports.updateProduct = function(req, res) {
   Product.findOneAndUpdate({_id: req.params.id}, req.body, {new: true},function (err, product) {
     if (err) {
@@ -37,6 +41,7 @@ exports.updateProduct = function(req, res) {
   }); 
 };
 
+// Delete Product
 exports.deleteProduct = function(req, res) {
   Product.findByIdAndRemove(req.params.id, function (err, product) {
     if (err) {
